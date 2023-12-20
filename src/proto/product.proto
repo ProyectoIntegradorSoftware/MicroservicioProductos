@@ -14,7 +14,7 @@ service ProductService {
 
 message CreateProductRequest {
   string nombre = 1;
-  string SKU = 2;
+  string sku = 2;
   string precio = 3;
   string descripcion = 4;
 }
@@ -22,8 +22,9 @@ message CreateProductRequest {
 message CreateProductResponse {
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string sku = 3;
+  string precio = 4;
+  string descripcion = 5;
 }
 
 message GetProductRequest {
@@ -31,24 +32,26 @@ message GetProductRequest {
 }
 
 message GetProductResponse {
-  string id = 1;
-  string nombre = 2;
+  string nombre = 1;
+  string sku = 2;
   string precio = 3;
   string descripcion = 4;
+  string id = 5
 }
 
 message UpdateProductRequest {
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string precio = 4;
+  string descripcion = 5;
 }
 
 message UpdateProductResponse {
-  string id = 1;
-  string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  
+  string nombre = 1;
+  string precio = 2;
+  string descripcion = 3;
+  string id = 4;
 }
 
 message DeleteProductRequest {
@@ -67,8 +70,9 @@ message ListProductsResponse {
 }
 
 message Product{
-  string id = 1;
-  string nombre = 2;
+  string nombre = 1;
+  string sku = 2;
   string precio = 3;
   string descripcion = 4;
+  string id = 5;
 }

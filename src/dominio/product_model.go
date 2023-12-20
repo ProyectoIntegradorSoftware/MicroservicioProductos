@@ -9,7 +9,7 @@ type ProductoGORM struct {
 	ID          uint   `gorm:"primaryKey:autoIncrement" json:"id"`
 	Nombre      string `gorm:"type:varchar(255);not null"`
 	SKU         string `gorm:"type:varchar(255);not null"`
-	Precio      string `gorm:"type:varchar(255);not null;unique"`
+	Precio      string `gorm:"type:varchar(255);not null"`
 	Descripcion string `gorm:"type:varchar(255);not null"`
 }
 

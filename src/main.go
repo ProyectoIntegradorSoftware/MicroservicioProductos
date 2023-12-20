@@ -29,7 +29,7 @@ func main() {
 	pb.RegisterProductServiceServer(grpcServe, userService)
 
 	// Define el puerto en el que se ejecutará el servidor gRPC
-	port := "50051"
+	port := "50052"
 	listen, err := net.Listen("tcp", ":"+port)
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)

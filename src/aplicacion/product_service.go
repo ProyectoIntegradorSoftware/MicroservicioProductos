@@ -51,6 +51,7 @@ func (s *ProductService) GetProduct(ctx context.Context, req *pb.GetProductReque
 	response := &pb.GetProductResponse{
 		Id:          u.ID,
 		Nombre:      u.Nombre,
+		SKU:         u.SKU,
 		Precio:      u.Precio,
 		Descripcion: u.Descripcion,
 	}
@@ -67,6 +68,7 @@ func (s *ProductService) ListProducts(ctx context.Context, req *pb.ListProductsR
 		product := &pb.Product{
 			Id:          u.ID,
 			Nombre:      u.Nombre,
+			SKU:         u.SKU,
 			Precio:      u.Precio,
 			Descripcion: u.Descripcion,
 		}
