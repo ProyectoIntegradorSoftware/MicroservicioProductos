@@ -1,7 +1,6 @@
 package adapters
 
 import (
-	"encoding/json"
 	"errors"
 	"fmt"
 	"log"
@@ -19,23 +18,13 @@ import (
  */
 
 type productRepository struct {
-	db             *database.DB
-	activeSessions map[string]string
+	db *database.DB
 }
 
 func NewProductRepository(db *database.DB) ports.ProductRepository {
 	return &productRepository{
-		db:             db,
-		activeSessions: make(map[string]string),
+		db: db,
 	}
-}
-
-func ToJSON(obj interface{}) (string, error) {
-	jsonData, err := json.Marshal(obj)
-	if err != nil {
-		return "", err
-	}
-	return string(jsonData), err
 }
 
 // ObtenerProducto obtiene un producto por su ID.
@@ -45,7 +34,6 @@ func (ur *productRepository) Producto(id string) (*model.Producto, error) {
 	}
 
 	var productoGORM model.ProductoGORM
-	//result := ur.db.GetConn().First(&productoGORM, id)
 	result := ur.db.GetConn().First(&productoGORM, id)
 	if result.Error != nil {
 		if result.Error == gorm.ErrRecordNotFound {

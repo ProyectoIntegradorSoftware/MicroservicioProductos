@@ -14,7 +14,7 @@ service ProductService {
 
 message CreateProductRequest {
   string nombre = 1;
-  string SKU = 2;
+  string sku = 2;
   string precio = 3;
   string descripcion = 4;
 }
@@ -22,7 +22,11 @@ message CreateProductRequest {
 message CreateProductResponse {
   string id = 1;
   string nombre = 2;
+<<<<<<< HEAD
   string SKU = 3;
+=======
+  string sku = 3;
+>>>>>>> ccb83c3275380a591d1c9b9aae1df80e35191e46
   string precio = 4;
   string descripcion = 5;
 }
@@ -32,27 +36,46 @@ message GetProductRequest {
 }
 
 message GetProductResponse {
+<<<<<<< HEAD
   string id = 1;
   string nombre = 2;
   string SKU = 3;
   string precio = 4;
   string descripcion = 5;
+=======
+  string nombre = 1;
+  string sku = 2;
+  string precio = 3;
+  string descripcion = 4;
+  string id = 5
+>>>>>>> ccb83c3275380a591d1c9b9aae1df80e35191e46
 }
 
 message UpdateProductRequest {
   string id = 1;
   string nombre = 2;
+<<<<<<< HEAD
   string SKU = 3;
+=======
+>>>>>>> ccb83c3275380a591d1c9b9aae1df80e35191e46
   string precio = 4;
   string descripcion = 5;
 }
 
 message UpdateProductResponse {
+<<<<<<< HEAD
   string id = 1;
   string nombre = 2;
   string SKU = 3;
   string precio = 4;
   string descripcion = 5;
+=======
+  
+  string nombre = 1;
+  string precio = 2;
+  string descripcion = 3;
+  string id = 4;
+>>>>>>> ccb83c3275380a591d1c9b9aae1df80e35191e46
 }
 
 message DeleteProductRequest {
@@ -71,9 +94,17 @@ message ListProductsResponse {
 }
 
 message Product{
+<<<<<<< HEAD
   string id = 1;
   string nombre = 2;
   string SKU = 3;
   string precio = 4;
   string descripcion = 5;
+=======
+  string nombre = 1;
+  string sku = 2;
+  string precio = 3;
+  string descripcion = 4;
+  string id = 5;
+>>>>>>> ccb83c3275380a591d1c9b9aae1df80e35191e46
 }
