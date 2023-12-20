@@ -22,8 +22,9 @@ message CreateProductRequest {
 message CreateProductResponse {
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string SKU = 3;
+  string precio = 4;
+  string descripcion = 5;
 }
 
 message GetProductRequest {
@@ -33,22 +34,25 @@ message GetProductRequest {
 message GetProductResponse {
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string SKU = 3;
+  string precio = 4;
+  string descripcion = 5;
 }
 
 message UpdateProductRequest {
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string SKU = 3;
+  string precio = 4;
+  string descripcion = 5;
 }
 
 message UpdateProductResponse {
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string SKU = 3;
+  string precio = 4;
+  string descripcion = 5;
 }
 
 message DeleteProductRequest {
@@ -69,6 +73,7 @@ message ListProductsResponse {
 message Product{
   string id = 1;
   string nombre = 2;
-  string precio = 3;
-  string descripcion = 4;
+  string SKU = 3;
+  string precio = 4;
+  string descripcion = 5;
 }
