@@ -102,6 +102,9 @@ func (ur *productRepository) ActualizarProducto(id string, input *model.Actualiz
 	if input.Nombre != nil {
 		productoGORM.Nombre = *input.Nombre
 	}
+	if input.SKU != nil {
+		productoGORM.SKU = *input.SKU
+	}
 	if input.Precio != nil {
 		productoGORM.Precio = *input.Precio
 	}
